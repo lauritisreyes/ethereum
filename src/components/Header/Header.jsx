@@ -1,5 +1,5 @@
 
-import { ChevronDown } from '../Common/Icons/Icons'
+import { IconContainer } from '../Common/Icons/Icons'
 import './Header.scss'
 
 
@@ -24,7 +24,7 @@ export const Header = () => {
                             <li className="Nav-li">
                                 <span className="Link-text">{text}</span>
                                 <span className="Link-icon">
-                                    <ChevronDown/>
+                                    <IconContainer name='ChevronDown'/>
                                 </span>
                             </li>
                         </a>
@@ -33,9 +33,14 @@ export const Header = () => {
                 </nav>
             </div>
             <div className="Header-right">
-                <div className="Header-search">Search</div>
-                <button className="Header-mode">Mode</button>
-                <a href="" className="Header-language">Languaje</a>
+                <div className="Header-search">
+                    <input className='Header-search' type="text" placeholder='Search' />
+                </div>
+                <button className="Header-mode"><IconContainer name='Moon'/></button>
+                <a href="" className="Header-language">
+                    <IconContainer name='Earth'/>
+                    <span className="Language-text">Languages</span>
+                </a>
             </div>
         </header>
     )

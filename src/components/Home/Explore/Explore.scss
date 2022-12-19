@@ -1,9 +1,13 @@
 @import './../../../partials/mixins';
 
 .Explore {
+    &-title {
+        margin: 6rem 2rem 4rem 2rem;
+    }
     &-cards {
         @include grid (3, 0rem);
         padding: 0 0 6rem 0;
+        margin: 1rem 2rem;
         .Cards {
             &-li {
                 margin: 1rem;

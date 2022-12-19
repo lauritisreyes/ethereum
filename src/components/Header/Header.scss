@@ -12,6 +12,7 @@
     }
     &-right {
         @include flex (row, nowrap, center, center);
+        gap: 0.5rem;
     }
     
     &-logo {
@@ -28,11 +29,30 @@
                 @include flex (row, nowrap, center, center);
                 padding: 0.5rem 0;
                 margin-right: 1.5rem;
+                .Chevron {
+                    max-width: 24px;
+                    max-height: 24px;
+                    color: #b2b2b2;
+                }
             }
-            .Chevron {
-                max-width: 24px;
-                max-height: 24px;
-            }
+        }
+    }
+    &-search {
+        padding: 0.5rem;
+        padding-right: 2rem;
+        border-radius: 0.25em;
+    }
+    &-mode {
+        .Moon {
+            width: 1.5rem;
+            color: #1a202c;
+        }
+    }
+    &-language {
+        @include flex (row, nowrap, center, center);
+        .Earth {
+            width: 1.5rem;
+            color: #1a202c;
         }
     }
 

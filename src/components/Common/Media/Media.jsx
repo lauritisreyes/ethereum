@@ -111,7 +111,7 @@ const MergeImage = () => {
 // Contribute
 
 
-const Finance = () => {
+const FinanceImage = () => {
     return (
         <img src="/assets/contribute/finance_transparent.webp" alt=""/>
     )

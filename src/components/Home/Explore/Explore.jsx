@@ -11,6 +11,7 @@ export const Explore = () => {
 
     return (
         <div className="Explore-container">
+            <h2 className="Explore-title">Explore Ethereum.org</h2>
             <ul className="Explore-cards">
                 {cards.map ( ({id, title, paragraph, image}) =>
                     <li key={id} className="Cards-li">
