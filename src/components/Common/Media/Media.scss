@@ -1,0 +1,67 @@
+@import './../../../partials/mixins';
+
+
+
+.Panel {
+    @include flex (column, nowrap, center, center);
+    border: 1px solid #1a202c;
+    border-radius: 2px;
+    background-color: white;
+    margin: 1rem 2rem 3rem 6rem;
+    box-shadow: 4px 4px 0px 0px #d2d2f9;
+    &-header {
+        @include flex (row, nowrap, space-between, center);
+        border-bottom: 1px solid #333333;
+        width: 100%;
+        padding: 1rem;
+        background-color: #f7f7f7;
+        .Header {
+            &-bullets {
+                @include flex (row, nowrap, center, center);
+                .Bullets {
+                    &-li {
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 6px;
+                        margin-right: 0.5rem;
+                        background-color: #D46666;
+                        &:nth-of-type(2) {
+                            background-color: #FFE78E;
+                        }
+                        &:last-of-type {
+                            background-color: #6Fc4A0;
+                        }
+                    }
+                }
+            }
+            &-title {
+                font-weight: 600;
+            }
+        }
+    }
+    &-cells {
+        width: 100%;
+        @include flex (column, nowrap, center, center);
+        .Cells {
+            &-ul {
+                width: 100%;
+            }
+            &-li {
+                background-color: white;
+                padding: 1rem;
+                width: 100%;
+                border-bottom: 1px solid #E2E8F0;
+            }
+            &-link {
+                @include flex (column, nowrap, center, flex-start);
+            }
+            &-title {
+                color: #333333;
+            }
+            &-description {
+                font-size: 0.875rem;
+                color: rgba(51, 51, 51, 0.7);
+            }
+        }
+    }
+}

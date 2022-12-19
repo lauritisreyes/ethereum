@@ -38,21 +38,47 @@
         }
     }
     &-search {
-        padding: 0.5rem;
-        padding-right: 2rem;
-        border-radius: 0.25em;
+        position: relative;
+        .Search {
+            &-input {
+                padding: 0.7rem 2.5rem;
+                border-radius: 0.25em;
+                outline: none;
+                border: 1px solid #7f7f7f;
+                &:focus {
+                    border: 2px solid blue;
+                }
+            }
+        }
+        .SearchIcon {
+            width: 1.5rem;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 0.5rem;
+            color: #b2b2b2;
+        }
     }
     &-mode {
-        .Moon {
-            width: 1.5rem;
-            color: #1a202c;
+        .Container {
+            min-width: 2.5rem;
+            @include flex (row, nowrap, center, center);
+            .Moon {
+                width: 1.5rem;
+                color: #1a202c;
+            }
         }
     }
     &-language {
         @include flex (row, nowrap, center, center);
-        .Earth {
-            width: 1.5rem;
-            color: #1a202c;
+        .Container {
+            @include flex (row, nowrap, center, center);
+            padding-right: 0.5rem;
+            .Earth {
+                width: 1.5rem;
+                color: #1a202c;
+            }
         }
     }
 

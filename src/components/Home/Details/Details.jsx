@@ -4,13 +4,58 @@ import './Details.scss'
 export const Details = () => {
 
     const details = [
-        { id:0, background:'#ccfcff', title: 'What is Ethereum?', paragraph:`Ethereum is a technology that's home to digital money, global payments, and applications. The community has built a booming digital economy, bold new ways for creators to earn online, and so much more. It's open to everyone, wherever you are in the world - all you need is the internet.`, button1:'What is Ethereum', button2:'More on digital money', image:'WhatImage'},
-        { id:1, background:'#ffe3d3', title: `A fairer financial system
-        `, paragraph:`Today, billions of people can’t open bank accounts, others have their payments blocked. Ethereum's decentralized finance (DeFi) system never sleeps or discriminates. With just an internet connection, you can send, receive, borrow, earn interest, and even stream funds anywhere in the world.
-        `, button1:'Explore DeFi', image:'ImpactImage'},
-        { id:2, background:'#e1fefa', title: 'The internet of assets', paragraph:`Ethereum isn't just for digital money. Anything you can own can be represented, traded and put to use as non-fungible tokens (NFTs). You can tokenise your art and get royalties automatically every time it's re-sold. Or use a token for something you own to take out a loan. The possibilities are growing all the time.`, button1:'More on NFTs', image:'InfrastructureImage'},
-        { id:3, background:'#ffe5f9', title: 'An open internet', paragraph:`Today, we gain access to 'free' internet services by giving up control of our personal data. Ethereum services are open by default - you just need a wallet. These are free and easy to set up, controlled by you, and work without any personal info.`, button1:'Explore the open internet', button2:'More on wallets', image:'FutureImage'},
-        { id:4, background:'#e8e8ff', title: 'A new frontier for development', paragraph:`Ethereum and its apps are transparent and open source. You can fork code and re-use functionality others have already built. If you don't want to learn a new language you can just interact with open-sourced code using JavaScript and other existing languages.`, button1:'Developer Portal', image:'FutureImage'},
+        { 
+            id:0,
+            background:'#ccfcff',
+            title: 'What is Ethereum?',
+            paragraph:`Ethereum is a technology that's home to digital money, global payments, and applications. The community has built a booming digital economy, bold new ways for creators to earn online, and so much more. It's open to everyone, wherever you are in the world - all you need is the internet.`,
+            image:'WhatImage',
+            buttons: [ 
+                { id:0, text:'What is Ethereum'},
+                { id:1, text:'More on digital money'}
+            ]    
+        },
+        {
+            id:1,
+            background:'#ffe3d3',
+            title: `A fairer financial system`,
+            paragraph:`Today, billions of people can’t open bank accounts, others have their payments blocked. Ethereum's decentralized finance (DeFi) system never sleeps or discriminates. With just an internet connection, you can send, receive, borrow, earn interest, and even stream funds anywhere in the world.`,
+            image:'ImpactImage',
+            buttons: [ 
+                { id:0, text:'Explore DeFi'},
+            ]    
+        },
+        { 
+            id:2,
+            background:'#e1fefa',
+            title: 'The internet of assets',
+            paragraph:`Ethereum isn't just for digital money. Anything you can own can be represented, traded and put to use as non-fungible tokens (NFTs). You can tokenise your art and get royalties automatically every time it's re-sold. Or use a token for something you own to take out a loan. The possibilities are growing all the time.`,
+            image:'InfrastructureImage',
+            buttons: [ 
+                { id:0, text:'More on NFTs'}
+            ]
+        },
+        { 
+            id:3,
+            background:'#ffe5f9',
+            title: 'An open internet',
+            paragraph:`Today, we gain access to 'free' internet services by giving up control of our personal data. Ethereum services are open by default - you just need a wallet. These are free and easy to set up, controlled by you, and work without any personal info.`,
+            image:'FutureImage',
+            buttons: [ 
+                { id:0, text:'Explore the open internet'},
+                { id:1, text:'More on wallets'}
+            ]  
+        },
+        { 
+            id:4,
+            background:'#e8e8ff',
+            title: 'A new frontier for development',
+            paragraph:`Ethereum and its apps are transparent and open source. You can fork code and re-use functionality others have already built. If you don't want to learn a new language you can just interact with open-sourced code using JavaScript and other existing languages.`, 
+            image:'PersonalizedPanel',
+            buttons: [ 
+                { id:0, text:'Developer Portal'},
+            ] 
+        }
     ]
 
     return (

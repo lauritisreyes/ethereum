@@ -1,6 +1,8 @@
 @import './../../../partials/mixins';
 
 .Start {
+    background-color: #fcfcfc;
+    padding: 1rem 2rem;
     &-summary {
         @include flex (row, nowrap, center, center);
         .Summary {

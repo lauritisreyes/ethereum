@@ -1,0 +1,48 @@
+@import './../../../partials/mixins';
+
+.Data {
+    background-color: #fcfcfc;
+    &-title {
+        padding: 6rem 2rem 4rem 2rem;
+    }
+    &-grid {
+        @include grid (2, 1rem);
+        margin: 2rem;
+    }
+    &-item {
+        height: 20rem;
+        border: 1px solid #333333;
+        padding: 1.5rem;
+        position: relative;
+        .Item {
+            &-title {
+                font-size: 1.25rem;
+                margin-bottom: 0.5rem;
+                text-transform: uppercase;
+            }
+            &-number {
+                font-size: 4rem;
+                font-weight: 600;
+                transform-origin: bottom left;
+                position: absolute;
+                line-height: 100%;
+                left: 1.5rem;
+                bottom: 1.5rem;
+            }
+            &-select {
+                position: absolute;
+                transform-origin: right bottom;
+                right: 1.5rem;
+                bottom: 1.5rem;
+                @include flex (row, nowrap, center, center);
+                .Select {
+                    &-button {
+                        padding: 2px 15px;
+                        border: 1px solid #333333;
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+        }
+    }
+}

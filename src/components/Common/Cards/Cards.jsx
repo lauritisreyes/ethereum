@@ -1,7 +1,7 @@
 import { ImageContainer } from "../Media/Media"
 import './Cards.scss'
 
-export const Card = ({title, paragraph, button1, image, background}) => {
+export const Card = ({title, paragraph, buttons, image, background}) => {
 
     return (
         <div className="Card" style={{ backgroundColor : background }}>
@@ -13,7 +13,10 @@ export const Card = ({title, paragraph, button1, image, background}) => {
                     <h2 className="Info-title">{title}</h2>
                     <p className="Info-p">{paragraph}</p>
                     <div className="Info-buttons">
-                        <a href="" className="Info-link Button-primary">{button1}</a>
+                        { buttons.map ( ({id,text}) =>
+                            <a key={id} href="" className="Info-link">{text}</a>
+                        ) }
+                        
                         
                     </div>
                 </div>

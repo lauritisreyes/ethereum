@@ -22,7 +22,26 @@
             &-p {
                 font-size: 1.25rem;
                 margin-bottom: 2rem;
-            }    
+            }
+            &-buttons {
+                @include flex (row, nowrap, flex-start, center);
+                gap: 0.5rem;
+            } 
+            &-link {
+                &:first-of-type {
+                    background-color: #1c1cff;
+                    color: white;
+                    display: inline-block;
+                    padding: 0.5rem 1rem;
+                    border-radius: 0.2rem;
+                }
+                &:nth-of-type(2) {
+                    border: 1px solid black;
+                    display: inline-block;
+                    padding: 0.5rem 1rem;
+                    border-radius: 0.2rem;
+                }
+            }   
         }
     }
 }

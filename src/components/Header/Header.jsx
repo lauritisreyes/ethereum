@@ -34,7 +34,8 @@ export const Header = () => {
             </div>
             <div className="Header-right">
                 <div className="Header-search">
-                    <input className='Header-search' type="text" placeholder='Search' />
+                    <input className='Search-input' type="text" placeholder='Search'/>
+                    <IconContainer name='Search'/>
                 </div>
                 <button className="Header-mode"><IconContainer name='Moon'/></button>
                 <a href="" className="Header-language">
