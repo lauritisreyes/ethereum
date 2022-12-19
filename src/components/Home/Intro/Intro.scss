@@ -1,0 +1,29 @@
+@import './../../../partials/mixins';
+
+.Intro {
+    @include flex (column, nowrap, center, center);
+    text-align: center;
+    &-media {
+        margin-bottom: 2rem;
+        height: 440px;
+        overflow: hidden;
+        @include flex (column, nowrap, center, center);
+    }
+    &-info {
+        padding: 1rem 0 2rem 0;
+        width: 55%;
+        .Info {
+            &-p {
+                font-size: 1.25rem;
+                color: #666666;
+                margin: 1.45rem 0;
+            }
+            &-link {
+                border: 1px solid black;
+                display: inline-block;
+                padding: 0.5rem 1rem;
+                border-radius: 0.2rem;
+            }
+        }
+    }
+}

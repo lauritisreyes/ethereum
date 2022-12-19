@@ -1,0 +1,28 @@
+@import './../../../partials/mixins';
+
+.Card {
+    height: 720px;
+    width: 100%;
+    @include flex (row, nowrap, center, center);
+    padding-left: -2rem;
+    border-top: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    &-media {
+        flex: 1;
+    }
+    &-info {
+        flex: 1;
+        .Info {
+            &-container {
+                padding: 6rem;
+            }
+            &-title {
+                margin: 3rem 0 0.5rem 0;
+            }
+            &-p {
+                font-size: 1.25rem;
+                margin-bottom: 2rem;
+            }    
+        }
+    }
+}

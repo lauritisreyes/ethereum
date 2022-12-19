@@ -1,0 +1,42 @@
+@import './../../partials/mixins';
+
+.Footer {
+    @include flex (column, nowrap, center, center);
+    width: 100%;
+    padding: 1rem 2rem;
+    &-row {
+        @include flex (row, nowrap, space-between, flex-start);
+        width: 100%;
+    }
+    &-update {
+        font-size: 0.875rem;
+        color: #666666;
+    }
+    &-social {
+        @include flex (row, nowrap, center, flex-start);
+        gap: 1rem;
+        margin: 1rem 0;
+        .Logo {
+            height: 34px;
+            color: #b2b2b2;
+        }
+    }
+    &-categories{
+        @include flex (column, nowrap, space-between, flex-start);
+        .Categories {
+            &-title {
+                font-size: 0.875rem;
+                font-weight: 700;
+                color: #1A202C;
+                margin: 1rem 0;
+            }
+            &-link {
+                margin-bottom: 1rem;
+                color: #666666;
+                font-size: 0.875rem;
+                
+            }
+        }
+    }
+}
+

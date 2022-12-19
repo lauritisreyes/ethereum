@@ -1,0 +1,55 @@
+@import './../../../partials/mixins';
+
+.Start {
+    &-summary {
+        @include flex (row, nowrap, center, center);
+        .Summary {
+            &-info {
+                flex: 1;
+                .Info {
+                    &-container {
+                        padding: 6rem;
+                    }
+                    &-h2 {
+                        margin: 0 0 1.5rem;
+                    }
+                }
+            }
+            &-media {
+                flex: 1;
+            }
+        }
+    }
+    &-cards {
+        @include grid (2, 0rem);
+        padding: 0 0 6rem 0;
+        .Cards {
+            &-li {
+                margin: 1rem;
+                border-radius: 2px;
+                border: 1px solid #333333;
+                background: #ffffff;
+                box-shadow: 4px 4px 0px 0px #d2d2f9;
+            }
+            &-media {
+                background: radial-gradient(46.28% 66.31% at 66.95% 58.35%, #e6e6f7 0%, #e7edfa 50%, #e9fbfa 100%);
+                box-shadow: inset 0px -1px 0px rgb(0 0 0 / 10%);
+                @include flex (row, nowrap, center, flex-end);
+                height: 260px;
+                .Container {
+                    width: 320px;
+                }
+
+            }
+            &-info {
+                padding: 1.5rem;
+                .Info {
+                    &-title {
+                        margin: 0.5rem 0 1rem 0;
+                    }
+                }
+            }
+        }
+    }
+    
+}

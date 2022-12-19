@@ -1,0 +1,39 @@
+@import './../../partials/mixins';
+
+
+.Header {
+    @include flex (row, nowrap, space-between, center);
+    background-color: white;
+    height: 4.75rem;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    &-left {
+        @include flex (row, nowrap, center, center);
+    }
+    &-right {
+        @include flex (row, nowrap, center, center);
+    }
+    
+    &-logo {
+        max-width: 22px;
+        max-height: 35px;
+    }
+    &-nav {
+        .Nav {
+            &-ul {
+                @include flex (row, nowrap, center, center);
+                margin-left: 2rem;
+            }
+            &-li {
+                @include flex (row, nowrap, center, center);
+                padding: 0.5rem 0;
+                margin-right: 1.5rem;
+            }
+            .Chevron {
+                max-width: 24px;
+                max-height: 24px;
+            }
+        }
+    }
+
+}
