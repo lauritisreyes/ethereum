@@ -1,12 +1,17 @@
 @import './../../../partials/mixins';
+@import '../../../partials/reset';
 
 .Card {
     height: 720px;
     width: 100%;
     @include flex (row, nowrap, center, center);
     padding-left: -2rem;
-    border-top: 1px solid #333333;
-    border-bottom: 1px solid #333333;
+    border-top: 1px solid var(--black20);
+    border-bottom: 1px solid var(--black20);
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        height: auto;
+    }
     &-media {
         flex: 1;
     }
@@ -29,19 +34,62 @@
             } 
             &-link {
                 &:first-of-type {
-                    background-color: #1c1cff;
+                    border: 1px solid var(--blue10);
+                    background-color: var(--blue10);
                     color: white;
                     display: inline-block;
                     padding: 0.5rem 1rem;
                     border-radius: 0.2rem;
+                    &:hover {
+                        opacity: 0.8;
+                        box-shadow: 4px 4px 0px 0px #e8e8ff;
+                    }
                 }
                 &:nth-of-type(2) {
                     border: 1px solid black;
                     display: inline-block;
                     padding: 0.5rem 1rem;
                     border-radius: 0.2rem;
+                    &:hover {
+                        box-shadow: 4px 4px 0px 0px #e8e8ff;
+                        color: var(--blue10);
+                        border-color: var(--blue10);
+                    }
                 }
             }   
+        }
+    }
+}
+
+.SmallCard {
+    &-li {
+        margin: 1rem;
+        border-radius: 2px;
+        border: 1px solid #333333;
+        background: #ffffff;
+        box-shadow: 4px 4px 0px 0px #d2d2f9;
+        transition: 0.1s ease;
+        &:hover {
+            box-shadow: 0px 8px 17px rgb(0 0 0 / 15%);
+            transform: scale(1.02);
+        }
+    }
+    &-media {
+        background: radial-gradient(46.28% 66.31% at 66.95% 58.35%, #e6e6f7 0%, #e7edfa 50%, #e9fbfa 100%);
+        box-shadow: inset 0px -1px 0px rgb(0 0 0 / 10%);
+        @include flex (row, nowrap, center, flex-end);
+        height: 260px;
+        .Container {
+            width: 320px;
+        }
+
+    }
+    &-info {
+        padding: 1.5rem;
+        .Info {
+            &-title {
+                margin: 0.5rem 0 1rem 0;
+            }
         }
     }
 }

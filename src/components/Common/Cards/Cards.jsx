@@ -16,8 +16,6 @@ export const Card = ({title, paragraph, buttons, image, background}) => {
                         { buttons.map ( ({id,text}) =>
                             <a key={id} href="" className="Info-link">{text}</a>
                         ) }
-                        
-                        
                     </div>
                 </div>
             </div>
@@ -25,3 +23,20 @@ export const Card = ({title, paragraph, buttons, image, background}) => {
     )
 }
 
+
+export const SmallCard = ({id, title, paragraph, image}) => {
+
+    return (
+        <li key={id} className="SmallCard-li">
+            <a href="" className="SmallCard-link">
+                <div className="SmallCard-media">
+                    <ImageContainer image={image}/>
+                </div>
+                <div className="SmallCard-info">
+                    <h3 className="Info-title">{title}</h3>
+                    <p className="Info-p">{paragraph}</p>
+                </div>
+            </a>
+        </li>
+    )
+}

@@ -11,6 +11,8 @@ export const IconContainer = ({name}) => {
             { name==='Earth' && <Earth/> }
             { name==='Search' && <Search/> }
             { name=== 'Developer' && <Developer/>}
+            { name=== 'Info' && <Info/>}
+            { name=== 'Burger' && <Burger/>}
         </div>
         
     )
@@ -54,6 +56,22 @@ const Developer = () => {
     return (
         <svg className='Developer' stroke="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
             <path fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32" d="M160 368L32 256l128-112m192 224l128-112-128-112"></path>
+        </svg>
+    )
+}
+
+const Info = () => {
+    return (
+        <svg className='InfoIcon' stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 7h2v2h-2V7zm0 4h2v6h-2v-6zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path>
+        </svg>
+    )
+}
+
+const Burger = () => {
+    return (
+        <svg viewBox="0 0 24 40" className="BurgerIcon">
+            <path d="M 2 13 l 10 0 l 0 0 l 10 0 M 4 19 l 8 0 M 12 19 l 8 0 M 2 25 l 10 0 l 0 0 l 10 0"></path>
         </svg>
     )
 }

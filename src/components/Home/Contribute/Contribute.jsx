@@ -18,7 +18,7 @@ export const Contribute = () => {
     ]
 
     return (
-        <div className="Contribute">
+        <div className="Contribute Wrapper">
             { details.map ( (details) => 
                 <Card {...details} key={details.id}/>
             )}

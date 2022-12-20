@@ -1,4 +1,5 @@
 
+import { SmallCard } from '../../Common/Cards/Cards'
 import { ImageContainer } from '../../Common/Media/Media'
 import './Start.scss'
 
@@ -6,7 +7,7 @@ import './Start.scss'
 export const Start = () => {
 
     return (
-        <div className="Start">
+        <div className="Start Wrapper">
             <Intro/>
             <Grid/>
             
@@ -43,18 +44,8 @@ const Grid = () => {
     return (
         <div className="Start-container">
             <ul className="Start-cards">
-                {cards.map ( ({id, title, paragraph, image, alt}) =>
-                    <li key={id} className="Cards-li">
-                        <a href="" className="Cards-link">
-                            <div className="Cards-media">
-                                <ImageContainer image={image}/>
-                            </div>
-                            <div className="Cards-info">
-                                <h3 className="Info-title">{title}</h3>
-                                <p className="Info-p">{paragraph}</p>
-                            </div>
-                        </a>
-                    </li>
+                {cards.map ( (cards) =>
+                    <SmallCard {...cards} key={cards.id}/>
                 ) }
              </ul>
         </div>

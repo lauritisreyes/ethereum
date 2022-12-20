@@ -1,4 +1,4 @@
-import {ImageContainer} from './../../Common/Media/Media'
+import { SmallCard } from '../../Common/Cards/Cards'
 import './Explore.scss'
 
 export const Explore = () => {
@@ -10,23 +10,13 @@ export const Explore = () => {
     ]
 
     return (
-        <div className="Explore-container">
+        <div className="Explore-container Wrapper">
             <h2 className="Explore-title">Explore Ethereum.org</h2>
             <ul className="Explore-cards">
-                {cards.map ( ({id, title, paragraph, image}) =>
-                    <li key={id} className="Cards-li">
-                        <a href="" className="Cards-link">
-                            <div className="Cards-media">
-                                <ImageContainer image={image}/>
-                            </div>
-                            <div className="Cards-info">
-                                <h3 className="Info-title">{title}</h3>
-                                <p className="Info-p">{paragraph}</p>
-                            </div>
-                        </a>
-                    </li>
+                {cards.map ( (cards) =>
+                    <SmallCard {...cards} key={cards.id}/>
                 ) }
-             </ul>
+            </ul>
         </div>
     )
 }

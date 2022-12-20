@@ -2,6 +2,7 @@
 
 .Details {
     @include flex (column, nowrap, center, center);
+    
     .Card {
         &:nth-of-type(even){
             flex-direction: row-reverse;

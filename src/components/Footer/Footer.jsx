@@ -17,82 +17,82 @@ export const Footer = () => {
             id:0,
             name:'Use Ethereum',
             links: [
-                { id:0, text:'Find wallet'},
-                { id:1, text:'Get ETH'},
-                { id:2, text:'Decentralized applications (dapps)'},
-                { id:3, text:'Layer 2'},
-                { id:4, text:'Run a node'},
-                { id:5, text:'Stablecoins'},
-                { id:6, text:'Stake ETH'}
+                { id:0, text:'Find wallet', icon: false},
+                { id:1, text:'Get ETH', icon: false},
+                { id:2, text:'Decentralized applications (dapps)', icon: false},
+                { id:3, text:'Layer 2', icon: false},
+                { id:4, text:'Run a node', icon: false},
+                { id:5, text:'Stablecoins', icon: false},
+                { id:6, text:'Stake ETH', icon: false}
             ]
         },
         {
             id:1,
             name:'Learn',
             links: [
-                { id:0, text:'What is Ethereum?'},
-                { id:1, text:'What is ether (ETH)?'},
-                { id:2, text:'Ethereum wallets'},
-                { id:3, text:'Community guides and resources'},
-                { id:4, text:'History of Ethereum'},
-                { id:5, text:'Ethereum Whitepaper'},
-                { id:6, text:'Ethereum upgrades'},
-                { id:7, text:'Ethereum security and scam prevention'},
-                { id:8, text:'Ethereum glossary'},
-                { id:9, text:'Ethereum governance'},
-                { id:10, text:'Blockchain bridges'},
-                { id:11, text:'Zero-knowledge proofs'},
-                { id:12, text:'Ethereum energy consumption'},
-                { id:13, text:'What is Web3?'},
-                { id:14, text:'Ethereum Improvement Proposals'}
+                { id:0, text:'What is Ethereum?', icon: false},
+                { id:1, text:'What is ether (ETH)?', icon: false},
+                { id:2, text:'Ethereum wallets', icon: false},
+                { id:3, text:'Community guides and resources', icon: false},
+                { id:4, text:'History of Ethereum', icon: false},
+                { id:5, text:'Ethereum Whitepaper', icon: false},
+                { id:6, text:'Ethereum upgrades', icon: false},
+                { id:7, text:'Ethereum security and scam prevention', icon: false},
+                { id:8, text:'Ethereum glossary', icon: false},
+                { id:9, text:'Ethereum governance', icon: false},
+                { id:10, text:'Blockchain bridges', icon: false},
+                { id:11, text:'Zero-knowledge proofs', icon: false},
+                { id:12, text:'Ethereum energy consumption', icon: false},
+                { id:13, text:'What is Web3?', icon: false},
+                { id:14, text:'Ethereum Improvement Proposals', icon: false}
             ]
         },
         {
             id:2,
             name:'Developers',
             links: [
-                { id:0, text:'Get started'},
-                { id:1, text:'Documentation'},
-                { id:2, text:'Tutorials'},
-                { id:3, text:'Learn by coding'},
-                { id:4, text:'Set up local environment'}
+                { id:0, text:'Get started', icon: false},
+                { id:1, text:'Documentation', icon: false},
+                { id:2, text:'Tutorials', icon: false},
+                { id:3, text:'Learn by coding', icon: false},
+                { id:4, text:'Set up local environment', icon: false}
             ]
         },
         {
             id:3,
             name:'Ecosystem',
             links: [
-                { id:0, text:'Community hub'},
-                { id:1, text:'Ethereum Foundation'},
-                { id:2, text:'Ethereum Foundation Blog'},
-                { id:3, text:'Ecosystem Support Program'},
-                { id:4, text:'Ethereum bug bounty program'},
-                { id:5, text:'Ecosystem Grant Programs'},
-                { id:6, text:'Ethereum brand assets'},
-                { id:7, text:'Devcon'}
+                { id:0, text:'Community hub', icon: false},
+                { id:1, text:'Ethereum Foundation', icon: false},
+                { id:2, text:'Ethereum Foundation Blog ↗', icon: true},
+                { id:3, text:'Ecosystem Support Program ↗', icon: true},
+                { id:4, text:'Ethereum bug bounty program', icon: false},
+                { id:5, text:'Ecosystem Grant Programs', icon: false},
+                { id:6, text:'Ethereum brand assets', icon: false},
+                { id:7, text:'Devcon ↗', icon: true}
             ]
         },
         {
             id:4, 
             name:'Enterprise',
             links: [
-                { id:0, text:'Mainnet Ethereum'},
-                { id:1, text:'Private Ethereum'},
-                { id:2, text:'Enterprise'}
+                { id:0, text:'Mainnet Ethereum', icon: false},
+                { id:1, text:'Private Ethereum', icon: false},
+                { id:2, text:'Enterprise', icon: false}
             ]
         },
         {
             id:5,
             name:'About ethereum.org',
             links: [
-                { id:0, text:'About us'},
-                { id:1, text:'Jobs'},
-                { id:2, text:'Contributing'},
-                { id:3, text:'Language support'},
-                { id:4, text:'Privacy policy'},
-                { id:5, text:'Terms of use'},
-                { id:6, text:'Cookie policy'},
-                { id:7, text:'Contact'}
+                { id:0, text:'About us', icon: false},
+                { id:1, text:'Jobs', icon: false},
+                { id:2, text:'Contributing', icon: false},
+                { id:3, text:'Language support', icon: false},
+                { id:4, text:'Privacy policy', icon: false},
+                { id:5, text:'Terms of use', icon: false},
+                { id:6, text:'Cookie policy', icon: false},
+                { id:7, text:'Contact ↗', icon: true}
             ]
         }
     ]
@@ -100,7 +100,7 @@ export const Footer = () => {
 
 
     return (
-        <div className="Footer">
+        <div className="Footer Wrapper">
             <div className="Footer-row">
                 <span className="Footer-update">Website last updated: December 15, 2022</span>
                 <ul className="Footer-social">

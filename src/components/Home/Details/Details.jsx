@@ -60,7 +60,7 @@ export const Details = () => {
 
     return (
         
-        <div className="Details">
+        <div className="Details Wrapper">
             {details.map ((details) =>
                 <Card {...details} key={details.id}/>
             )}

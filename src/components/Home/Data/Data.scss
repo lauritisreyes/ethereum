@@ -1,33 +1,52 @@
 @import './../../../partials/mixins';
+@import '../../../partials/reset';
 
 .Data {
     background-color: #fcfcfc;
     &-title {
-        padding: 6rem 2rem 4rem 2rem;
+        padding: 5rem 2rem 2rem 2rem;
+    }
+    &-description {
+        font-size: 1.25rem;
+        padding: 0.5rem 0 3rem 2rem;
     }
     &-grid {
         @include grid (2, 1rem);
         margin: 2rem;
+        @media (max-width: 1000px) {
+            @include grid(1, 1rem);
+        }
     }
     &-item {
         height: 20rem;
-        border: 1px solid #333333;
+        border: 1px solid var(--black20);
         padding: 1.5rem;
         position: relative;
+        @include flex (column, nowrap, flex-start, flex-start);
+        gap: 0.5rem;
         .Item {
             &-title {
                 font-size: 1.25rem;
                 margin-bottom: 0.5rem;
                 text-transform: uppercase;
             }
-            &-number {
-                font-size: 4rem;
-                font-weight: 600;
+            &-digit {
                 transform-origin: bottom left;
                 position: absolute;
-                line-height: 100%;
                 left: 1.5rem;
                 bottom: 1.5rem;
+                @include flex (row, nowrap, center, flex-end);
+                gap: 1rem;
+                .Digit {
+                    &-number {
+                        font-size: 4rem;
+                        font-weight: 600;
+                        line-height: 100%;
+                    }
+                    &-icon {
+                        width: 24px;
+                    }
+                }
             }
             &-select {
                 position: absolute;
@@ -38,8 +57,12 @@
                 .Select {
                     &-button {
                         padding: 2px 15px;
-                        border: 1px solid #333333;
+                        border: 1px solid var(--black20);
                         font-size: 1.25rem;
+                        cursor: pointer;
+                        &.active {
+                            background-color: #e8e8ff;
+                        }
                     }
                 }
             }

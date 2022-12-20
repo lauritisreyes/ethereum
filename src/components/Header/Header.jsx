@@ -15,34 +15,39 @@ export const Header = () => {
 
     return (
         <header className="Header">
-            <div className="Header-left">
-                <a href="" className="Header-Logo"><Logo/></a>
-                <nav className="Header-nav">
-                    <ul className="Nav-ul">
-                        {sections.map ( ({id, text}) =>
-                        <a key={id} href="" className="Nav-link">
-                            <li className="Nav-li">
-                                <span className="Link-text">{text}</span>
-                                <span className="Link-icon">
-                                    <IconContainer name='ChevronDown'/>
-                                </span>
-                            </li>
-                        </a>
-                        )} 
-                    </ul>
-                </nav>
-            </div>
-            <div className="Header-right">
-                <div className="Header-search">
-                    <input className='Search-input' type="text" placeholder='Search'/>
-                    <IconContainer name='Search'/>
+            <div className="Header-wrapper Wrapper">
+                <div className="Header-left">
+                    <a href="" className="Header-Logo"><Logo/></a>
+                    <nav className="Header-nav">
+                        <ul className="Nav-ul">
+                            {sections.map ( ({id, text}) =>
+                                <li key={id} className="Nav-li">
+                                    <a href="" className="Nav-link">
+                                        <span className="Link-text">{text}</span>
+                                        <span className="Link-icon">
+                                            <IconContainer name='ChevronDown'/>
+                                        </span>
+                                    </a>
+                                </li>
+                            )} 
+                        </ul>
+                    </nav>
                 </div>
-                <button className="Header-mode"><IconContainer name='Moon'/></button>
-                <a href="" className="Header-language">
-                    <IconContainer name='Earth'/>
-                    <span className="Language-text">Languages</span>
-                </a>
-            </div>
+                <div className="Header-right">
+                    <div className="Header-search">
+                        <input className='Search-input' type="text" placeholder='Search'/>
+                        <IconContainer name='Search'/>
+                        <span className="Search-detail">/</span>
+                    </div>
+                    <button className="Header-mode"><IconContainer name='Moon'/></button>
+                    <a href="" className="Header-language">
+                        <IconContainer name='Earth'/>
+                        <span className="Language-text">Languages</span>
+                    </a>
+                    <IconContainer name='Search'/>
+                    <IconContainer name='Burger'/>
+                </div>
+            </div> 
         </header>
     )
 }

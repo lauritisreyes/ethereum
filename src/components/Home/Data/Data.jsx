@@ -1,6 +1,9 @@
+import { useState } from 'react'
+import { IconContainer } from '../../Common/Icons/Icons'
 import './Data.scss'
 
 export const Data = () => {
+
 
     const data = [
         {
@@ -29,23 +32,41 @@ export const Data = () => {
         }
     ]
 
+
+
     return (
-        <div className="Data">
+        <div className="Data Wrapper">
             <h2 className="Data-title">Ethereum today</h2>
-            <p>The latest network statistics</p>
+            <p className='Data-description'>The latest network statistics</p>
             <div className="Data-grid">
-                { data.map ( ({id,title,description,number}) => 
-                    <div key={id} className="Data-item">
-                        <span className="Item-title">{title}</span>
-                        <p className="Item-description">{description}</p>
-                        <span className="Item-number">{number}</span>
-                        <div className="Item-select">
-                            <button className="Select-button">30d</button>
-                            <button className="Select-button">90d</button>
-                        </div>
-                    </div>
+                { data.map ( (data) => 
+                    <DataItem {...data} key={data.id}/>
                 )}
             </div>
         </div>
+    )
+}
+
+
+const DataItem = ({title, description, number}) => {
+
+    let [ value, setValue ] = useState (0)
+    const changeValue = ( value ) => setValue (value) 
+
+    return (
+        <div className="Data-item">
+                        <span className="Item-title">{title}</span>
+                        <p className="Item-description">{description}</p>
+                        <div className="Item-digit">
+                            <span className="Digit-number">{number}</span>
+                            <span className="Digit-icon">
+                                <IconContainer name='Info'/>
+                            </span>
+                        </div>
+                        <div className="Item-select">
+                            <button onClick={ () => changeValue(0)} className={`Select-button ${ value === 0 ? 'active' : ''}`}>30d</button>
+                            <button onClick={ () => changeValue (1)} className={`Select-button ${ value === 1 ? 'active' : ''}`}>90d</button>
+                        </div>
+                    </div>
     )
 }

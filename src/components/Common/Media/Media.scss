@@ -1,4 +1,5 @@
 @import './../../../partials/mixins';
+@import './../../../partials/reset';
 
 
 
@@ -51,6 +52,10 @@
                 padding: 1rem;
                 width: 100%;
                 border-bottom: 1px solid #E2E8F0;
+                &:hover {
+                    box-shadow: 0 0 1px var(--blue10);
+                    background: #d1d1ff;
+                }
             }
             &-link {
                 @include flex (column, nowrap, center, flex-start);

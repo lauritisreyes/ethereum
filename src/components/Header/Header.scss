@@ -1,12 +1,21 @@
 @import './../../partials/mixins';
+@import '../../partials/reset';
 
 
 .Header {
-    @include flex (row, nowrap, space-between, center);
+    @include flex (row, nowrap, center, center);
+    width: 100%;
     background-color: white;
-    height: 4.75rem;
-    padding: 1rem 2rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    &-wrapper {
+        @include flex (row, nowrap, space-between, center);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        height: 4.75rem;
+        padding: 1rem 2rem;
+        width: 100%;
+    }
     &-left {
         @include flex (row, nowrap, center, center);
     }
@@ -25,7 +34,7 @@
                 @include flex (row, nowrap, center, center);
                 margin-left: 2rem;
             }
-            &-li {
+            &-link {
                 @include flex (row, nowrap, center, center);
                 padding: 0.5rem 0;
                 margin-right: 1.5rem;
@@ -34,30 +43,69 @@
                     max-height: 24px;
                     color: #b2b2b2;
                 }
+                &:hover {
+                    color: var(--blue10);
+                    .Chevron {
+                        color: var(--blue10);
+                    }
+                }
             }
         }
+        @media (max-width: 1200px) {
+            display: none;
+        }
+    }
+    .SearchIcon {
+        color: black;
+        width: 1.5rem;
+        display: none;
+        @media (max-width: 1200px) {
+            display: block;
+        }
+    }
+    .BurgerIcon {
+        width: 1.5rem;
+        color: black;
+        fill: black;
     }
     &-search {
         position: relative;
         .Search {
             &-input {
+                position: relative;
                 padding: 0.7rem 2.5rem;
                 border-radius: 0.25em;
                 outline: none;
                 border: 1px solid #7f7f7f;
                 &:focus {
-                    border: 2px solid blue;
+                    border: 2px solid var(--blue10);
                 }
+            }
+            &-detail {
+                line-height: 100%;
+                padding: 0 6px;
+                border: 1px solid #7f7f7f;
+                border-radius: 0.25em;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: 6px 0;
+                right: 0.5rem;
+
             }
         }
         .SearchIcon {
+            display: block;
             width: 1.5rem;
             position: absolute;
             top: 0;
             bottom: 0;
             margin: auto;
             left: 0.5rem;
-            color: #b2b2b2;
+            color: var(--grey50);
+        }
+        @media (max-width: 1200px) {
+            display: none;
         }
     }
     &-mode {
@@ -66,8 +114,14 @@
             @include flex (row, nowrap, center, center);
             .Moon {
                 width: 1.5rem;
-                color: #1a202c;
+                color: var(--black10);
+                &:hover {
+                    color: var(--blue10);
+                }
             }
+        }
+        @media (max-width: 1200px) {
+            display: none;
         }
     }
     &-language {
@@ -77,7 +131,16 @@
             padding-right: 0.5rem;
             .Earth {
                 width: 1.5rem;
-                color: #1a202c;
+                color: var(--black10);
+            }
+        }
+        @media (max-width: 1200px) {
+            display: none;
+        }
+        &:hover {
+            color: var(--blue10);
+            .Earth {
+                color: var(--blue10);
             }
         }
     }
