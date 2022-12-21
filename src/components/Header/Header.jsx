@@ -6,8 +6,8 @@ import './Header.scss'
 export const Header = () => {
 
     const sections = [
-        { id:0, text:'Use Ethereum'},
-        { id:1, text:'Learn'},
+        { id:0, text: 'Use Ethereum'},
+        { id:1, text: 'Learn'},
         { id:2, text: 'Developers'},
         { id:3, text: 'Enterprise'},
         { id:4, text: 'Community'}
@@ -17,12 +17,12 @@ export const Header = () => {
         <header className="Header">
             <div className="Header-wrapper Wrapper">
                 <div className="Header-left">
-                    <a href="" className="Header-Logo"><Logo/></a>
+                    <a href="#" className="Header-Logo"><Logo/></a>
                     <nav className="Header-nav">
                         <ul className="Nav-ul">
                             {sections.map ( ({id, text}) =>
                                 <li key={id} className="Nav-li">
-                                    <a href="" className="Nav-link">
+                                    <a href="#" className="Nav-link">
                                         <span className="Link-text">{text}</span>
                                         <span className="Link-icon">
                                             <IconContainer name='ChevronDown'/>
@@ -40,12 +40,16 @@ export const Header = () => {
                         <span className="Search-detail">/</span>
                     </div>
                     <button className="Header-mode"><IconContainer name='Moon'/></button>
-                    <a href="" className="Header-language">
+                    <a href="#" className="Header-language">
                         <IconContainer name='Earth'/>
                         <span className="Language-text">Languages</span>
                     </a>
                     <IconContainer name='Search'/>
-                    <IconContainer name='Burger'/>
+                    <a className="Icon-burger" href="#">
+                        <div className="Burger-rectangle"></div>
+                        <div className="Burger-rectangle"></div>
+                        <div className="Burger-rectangle"></div>
+                    </a>
                 </div>
             </div> 
         </header>

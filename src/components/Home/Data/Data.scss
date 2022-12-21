@@ -14,7 +14,8 @@
         @include grid (2, 1rem);
         margin: 2rem;
         @media (max-width: 1000px) {
-            @include grid(1, 1rem);
+            @include grid(1, 0);
+            margin: 2rem 0;
         }
     }
     &-item {
@@ -24,6 +25,17 @@
         position: relative;
         @include flex (column, nowrap, flex-start, flex-start);
         gap: 0.5rem;
+        @media (max-width: 1000px) {
+            border: none;
+            border-bottom: 1px solid var(--black20);
+        }
+        &:first-of-type {
+            @media (max-width: 1000px) {
+                border: none;
+                border-bottom: 1px solid var(--black20);
+                border-top: 1px solid var(--black20);
+            }
+        }
         .Item {
             &-title {
                 font-size: 1.25rem;

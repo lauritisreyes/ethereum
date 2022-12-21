@@ -6,6 +6,22 @@
     .Card {
         &:nth-of-type(even){
             flex-direction: row-reverse;
+            @media (max-width: 1000px) {
+                flex-direction: column;
+            }
+        }
+        &:last-of-type {
+            @media (max-width: 1000px) {
+                .Card {
+                    &-media {
+                        width: 100%;
+                        padding: 1rem 2rem;
+                    }
+                }
+                .Container {
+                    width: 100%;
+                }
+            }
         }
     }
 }

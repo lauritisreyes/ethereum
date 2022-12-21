@@ -6,9 +6,17 @@
     width: 100%;
     padding: 1rem 2rem;
     &-row {
-        @include flex (row, nowrap, space-between, flex-start);
+        @include flex (row, wrap, space-between, flex-start);
         width: 100%;
     }
+    &-rowCategories {
+        @include flex (row, nowrap, space-between, flex-start);
+        width: 100%;
+        @media (max-width:1400px) {
+            @include flex (row, wrap, space-between, flex-start);
+        }
+    }
+
     &-update {
         font-size: 0.875rem;
         color: var(--grey30);
@@ -24,6 +32,15 @@
     }
     &-categories{
         @include flex (column, nowrap, space-between, flex-start);
+        @media (max-width:1400px) {
+            width: 30%;
+        }
+        @media (max-width:900px) {
+            width: 40%;
+        }
+        @media (max-width:600px) {
+            width: 80%;
+        }
         .Categories {
             &-title {
                 font-size: 0.875rem;

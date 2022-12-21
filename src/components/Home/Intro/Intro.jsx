@@ -8,7 +8,7 @@ export const Intro = () => {
             <div className="Intro-media">
                 <ImageContainer image='HeaderImage'/>
             </div>
-            <span className="Intro-h1">Ethereum</span>
+            <span className="Intro-comment">Ethereum</span>
             <div className="Intro-info">
                 <h1 className='Info-h1'>Welcome to Ethereum</h1>
                 <p className="Info-p">Ethereum is the community-run technology powering the cryptocurrency ether (ETH) and thousands of decentralized applications.</p>

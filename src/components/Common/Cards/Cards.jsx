@@ -1,3 +1,4 @@
+import { IconContainer } from "../Icons/Icons"
 import { ImageContainer } from "../Media/Media"
 import './Cards.scss'
 
@@ -13,13 +14,24 @@ export const Card = ({title, paragraph, buttons, image, background}) => {
                     <h2 className="Info-title">{title}</h2>
                     <p className="Info-p">{paragraph}</p>
                     <div className="Info-buttons">
-                        { buttons.map ( ({id,text}) =>
-                            <a key={id} href="" className="Info-link">{text}</a>
+                        { buttons.map ( (buttons) =>
+                            <Button key={buttons.id} {...buttons}/>
                         ) }
                     </div>
                 </div>
             </div>
         </div>
+    )
+}
+
+const Button = ({text, icon}) => {
+    return (
+        <a href="" className="Info-link">
+            <div className={`Link-extra ${ icon ? 'isActive' : ''}`}>
+                <IconContainer name='GitHub'/>
+            </div>
+            <span className="Link-text">{text}</span>
+        </a>
     )
 }
 

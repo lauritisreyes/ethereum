@@ -21,6 +21,7 @@ export const ImageContainer = ({image}) => {
 
             { image==='EnterpriseImage' && <EnterpriseImage/> }
             { image==='MergeImage' && <MergeImage/> }
+            { image==='Infrastructure2Image' && <Infrastructure2Image/> }
 
             { image==='FinanceImage' && <FinanceImage/>}
             
@@ -32,7 +33,7 @@ export const ImageContainer = ({image}) => {
 
 const HeaderImage = () => {
     return (
-        <img className="Image-EthUniverse" src="/assets/header/hero.webp" alt="" />
+        <img className="HeaderImage" src="/assets/header/hero.webp" alt="An illustration of a futuristic city, representing the Ethereum ecosystem." />
     )
 }
 
@@ -41,31 +42,31 @@ const HeaderImage = () => {
 
 const HackathonImage = () => {
     return (
-        <img src="/assets/start/hackathon_transparent.webp" alt="" />
+        <img src="/assets/start/hackathon_transparent.webp" alt="Illustration of a person working on a computer." />
     )
 }
 
 const DevelopersImage = () => {
     return (
-        <img src="/assets/start/developers-eth-blocks.webp" alt="" />
+        <img src="/assets/start/developers-eth-blocks.webp" alt="An illustration of a hand creating an ETH logo made of lego bricks." />
     )
 }
 
 const DogeImage = () => {
     return (
-        <img src="/assets/start/doge-computer.webp" alt="" />
+        <img src="/assets/start/doge-computer.webp" alt="Illustration of a doge using a computer." />
     )
 }
 
 const EthImage = () => {
     return (
-        <img src="/assets/start/eth.webp" alt="" />
+        <img src="/assets/start/eth.webp" alt="Illustration of a group of people marvelling at an ether (ETH) glyph in awe." />
     )
 }
 
 const WalletImage = () => {
     return (
-        <img src="/assets/start/wallet-cropped.webp" alt="" />
+        <img src="/assets/start/wallet-cropped.webp" alt="Illustration of a robot with a vault for a body, representing an Ethereum wallet." />
     )
 }
 
@@ -75,25 +76,25 @@ const WalletImage = () => {
 
 const FutureImage = () => {
     return (
-        <img src="/assets/details/future_transparent.webp" alt="" />
+        <img src="/assets/details/future_transparent.webp" alt="Illustration of a futuristic computer set up, powered by Ethereum crystals." />
     )
 }
 
 const ImpactImage = () => {
     return (
-        <img src="/assets/details/impact_transparent.webp" alt="" />
+        <img src="/assets/details/impact_transparent.webp" alt="Illustration of hands offering an ETH symbol." />
     )
 }
 
 const InfrastructureImage = () => {
     return (
-        <img src="/assets/details/infrastructure_transparent.webp" alt="" />
+        <img src="/assets/details/infrastructure_transparent.webp" alt="An Eth logo being displayed via hologram." />
     )
 }
 
 const WhatImage = () => {
     return (
-        <img src="/assets/details/what-is-ethereum.webp" alt="" />
+        <img src="/assets/details/what-is-ethereum.webp" alt="Illustration of a person peering into a bazaar, meant to represent Ethereum." />
     )
 }
 
@@ -115,13 +116,16 @@ const PersonalizedPanel = () => {
                     <li className="Bullets-li"></li>
                 </ul>
                 <span className="Header-title">Code examples</span>
-                <IconContainer name='Developer'/>
+                {/* <IconContainer name='Developer'/> */}
+                <div className="Header-icon">
+                    <IconContainer name='Developer'/>
+                </div>
             </div>
             <div className="Panel-cells">
                 <ul className="Cells-ul">
                     { data.map ( ({id, title, description}) => 
                         <li className="Cells-li" key={id}>
-                            <a className="Cells-link" href="">
+                            <a className="Cells-link" href="#">
                                 <span className="Cells-title">{title}</span>
                                 <span className="Cells-description">{description}</span>
                             </a>
@@ -139,13 +143,19 @@ const PersonalizedPanel = () => {
 
 const EnterpriseImage = () => {
     return (
-        <img src="/assets/details/what-is-ethereum.webp" alt="" />
+        <img src="/assets/explore/enterprise-eth.webp" alt="Illustration of a group of builders working together." />
     )
 }
 
 const MergeImage = () => {
     return (
-        <img src="/assets/explore/merge.webp" alt=""/>
+        <img src="/assets/explore/merge.webp" alt="Illustration of a spaceship representing the increased power after Ethereum upgrades."/>
+    )
+}
+
+const Infrastructure2Image = () => {
+    return (
+        <img src="/assets/explore/infrastructure_transparent.webp" alt="Illustration of a futuristic computer/device."/>
     )
 }
 
@@ -154,7 +164,7 @@ const MergeImage = () => {
 
 const FinanceImage = () => {
     return (
-        <img src="/assets/contribute/finance_transparent.webp" alt=""/>
+        <img className='FinanceImage' src="/assets/contribute/finance_transparent.webp" alt="An Ethereum logo made of lego bricks."/>
     )
 }
 

@@ -10,6 +10,9 @@
         @media (max-width: 1000px) {
             @include grid(1, 0rem);
         }
+        .SmallCard-media {
+            align-items: center;
+        }
     }
 }
     

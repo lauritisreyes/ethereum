@@ -7,14 +7,29 @@
     padding-top: 4.75rem;
     &-media {
         margin-bottom: 2rem;
-        height: 440px;
         overflow: hidden;
+        width: 100%;
         @include flex (column, nowrap, center, center);
+        .Container {
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            .HeaderImage {
+                height: 440px;
+            }
+        }
     }
     &-info {
         padding: 1rem 0 2rem 0;
         width: 55%;
+        @media (max-width: 1200px) {
+            width: 100%;
+            padding: 1rem 1.5rem 2rem 1.5rem;
+        }
         .Info {
+            &-h1 {
+                line-height: 1.4;
+            }
             &-p {
                 font-size: 1.25rem;
                 color: var(--grey30);

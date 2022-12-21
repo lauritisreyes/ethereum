@@ -106,20 +106,20 @@ export const Footer = () => {
                 <ul className="Footer-social">
                     { social.map ( ( social ) => 
                     <li className='Footer-icon' key={social.id}>
-                        <a href="" className='Icon-link'>
+                        <a href="#" className='Icon-link'>
                             <SocialContainer {...social}/>
                         </a>
                     </li>
                     )}
                 </ul>
             </div>
-            <div className="Footer-row">
+            <div className="Footer-rowCategories">
                 { data.map ( ( {id, name, links} ) => 
                     <ul key={id} className="Footer-categories">
                         <span className="Categories-title">{name}</span>
                         { links.map ( ({id, text}) => 
                             <li key={id} className="Categories-li">
-                                <a className='Categories-link' href="">{text}</a>
+                                <a className='Categories-link' href="#">{text}</a>
                             </li>
                         )}
                     </ul>
