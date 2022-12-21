@@ -115,14 +115,16 @@ export const Footer = () => {
             </div>
             <div className="Footer-rowCategories">
                 { data.map ( ( {id, name, links} ) => 
-                    <ul key={id} className="Footer-categories">
+                    <div key={id} className="Footer-container">
                         <span className="Categories-title">{name}</span>
-                        { links.map ( ({id, text}) => 
-                            <li key={id} className="Categories-li">
-                                <a className='Categories-link' href="#">{text}</a>
-                            </li>
-                        )}
-                    </ul>
+                        <ul className="Footer-categories">
+                            { links.map ( ({id, text}) => 
+                                <li key={id} className="Categories-li">
+                                    <a className='Categories-link' href="#">{text}</a>
+                                </li>
+                            )}
+                        </ul>
+                    </div>
                 )}
             </div>
         </div>

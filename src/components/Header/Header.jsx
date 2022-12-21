@@ -24,9 +24,9 @@ export const Header = () => {
                                 <li key={id} className="Nav-li">
                                     <a href="#" className="Nav-link">
                                         <span className="Link-text">{text}</span>
-                                        <span className="Link-icon">
+                                        <div className="Link-icon">
                                             <IconContainer name='ChevronDown'/>
-                                        </span>
+                                        </div>
                                     </a>
                                 </li>
                             )} 
