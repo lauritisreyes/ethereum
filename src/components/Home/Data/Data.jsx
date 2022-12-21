@@ -59,9 +59,9 @@ const DataItem = ({title, description, number}) => {
                         <p className="Item-description">{description}</p>
                         <div className="Item-digit">
                             <span className="Digit-number">{number}</span>
-                            <span className="Digit-icon">
+                            <div className="Digit-icon">
                                 <IconContainer name='Info'/>
-                            </span>
+                            </div>
                         </div>
                         <div className="Item-select">
                             <button onClick={ () => changeValue(0)} className={`Select-button ${ value === 0 ? 'active' : ''}`}>30d</button>

@@ -39,7 +39,7 @@ export const Header = () => {
                         <IconContainer name='Search'/>
                         <span className="Search-detail">/</span>
                     </div>
-                    <button className="Header-mode"><IconContainer name='Moon'/></button>
+                    <div className="Header-mode"><IconContainer name='Moon'/></div>
                     <a href="#" className="Header-language">
                         <IconContainer name='Earth'/>
                         <span className="Language-text">Languages</span>
