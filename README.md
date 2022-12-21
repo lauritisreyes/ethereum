@@ -1,7 +1,7 @@
 # Ethereum copycat
 
 ## Visit the Live Site
-- [https://apple-copycat.netlify.app](https://ethereum-copycat.netlify.app)
+- [https://ethereum-copycat.netlify.app](https://ethereum-copycat.netlify.app)
 
 ## Description 📑
 
