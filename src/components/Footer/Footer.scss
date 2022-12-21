@@ -29,6 +29,9 @@
             height: 34px;
             color: #b2b2b2;
         }
+        .Container {
+            width: 34px;
+        }
     }
     &-categories{
         @include flex (column, nowrap, space-between, flex-start);
