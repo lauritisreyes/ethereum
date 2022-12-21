@@ -9,9 +9,9 @@ This is a copycat of the Ethereum website using ReactJS components and designing
 
 ## Preview
 
-![Captura del proyecto](https://github.com/lauritisreyes/ethereum/blob/6399bafd65fdd79f3027c0ad3791ea7ace328c53/public/assets/screenshot-1.png)
+![Captura del proyecto](https://github.com/lauritisreyes/ethereum/blob/4355b428642be993e0aa897ff417a948d6e0f952/public/assets/screenshot-1.png)
 
-![Captura del proyecto](https://github.com/lauritisreyes/ethereum/blob/6399bafd65fdd79f3027c0ad3791ea7ace328c53/public/assets/screenshot-2.png)
+![Captura del proyecto](https://github.com/lauritisreyes/ethereum/blob/4355b428642be993e0aa897ff417a948d6e0f952/public/assets/screenshot-2.png)
 
 
 ## Autor ✒️
